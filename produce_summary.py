@@ -27,10 +27,7 @@ def lines_into_list(line):
 def print_info(item_list):
     """ prints delivery info from given list of items """
 
-    melon = item_list[0]
-    count = item_list[1]
-    amount = item_list[2]
-
+    melon, count, amount = item_list
     print("Delivered {} {}s for total of ${}".format(melon, count, amount))
 
 
