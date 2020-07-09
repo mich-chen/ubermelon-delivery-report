@@ -1,7 +1,26 @@
 
 
+def get_item(lst):
+    """ takes list and stores melon name, number, and $ amount"""
+
+    melon = lst[0]
+    count = lst[1]
+    amount = lst[2]
+
+    return melon, count, amount # returns as >>> (melon, count, amount)
 
 
+def lines_into_list(file):
+    """ takes file with lines and strips, and splits to return a list of item words """
+
+    for line in file:
+        words_list = line.strip().split('|')
+        print(words_list)
+
+
+def day_1():
+    print("Day 1")
+    the_file = open("um-deliveries-20140519.txt")
 
 
 print("Day 1") # prints "day 1" as a title
