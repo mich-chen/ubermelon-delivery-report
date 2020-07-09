@@ -1,21 +1,9 @@
-
-
-def get_item(lst):
-    """ takes list and stores melon name, number, and $ amount"""
-
-    item_lst = 0
-    melon = lst[0]
-    count = lst[1]
-    amount = lst[2]
-
-    return [melon, count, amount] # returns as >>> (melon, count, amount) <<is a tuple
-
-
 def lines_into_list(line):
     """ takes file with lines and strips, and splits to return a list of item words """
 
     words = line.rstrip().split('|')
     return words
+
 
 def print_info(item_list):
     """ prints delivery info from given list of items """
@@ -49,8 +37,7 @@ def day_2():
     the_file = open("um-deliveries-20140520.txt")
     for line in the_file:
         words_list = lines_into_list(line)
-        items = get_item(words_list)
-        print_info()
+        print_info(words_list)
     the_file.close()
 
 def day_3():
@@ -58,7 +45,7 @@ def day_3():
     the_file = open("um-deliveries-20140521.txt")
     for line in the_file:
         words_list = lines_into_list(line)
-        items = get_items(words_list)
-        print_info()
+        print_info(words_list)
     the_file.close()
-    
+
+day_2()
